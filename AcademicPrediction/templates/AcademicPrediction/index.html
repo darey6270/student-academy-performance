@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{%block content1 %}
+
+	<!-- hero area -->
+	<div class="hero-area hero-bg"  style="background-image:url({% static 'assets/image/group_stud.jpg' %})">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+							<p class="subtitle"><strong>STUDENTS ACADEMIC PERFORMANCE </strong></p>
+							<p class=" text-white mb-5">Studying the academic achievements of students
+                            is therefore of great importance for fostering student improvements and
+                            enhancing the standard of higher education .</p>
+							<div class="hero-btns">
+								<a href="{% url 'about' %}" class="boxed-btn">Learn more</a>
+								<a href="{% url 'contact' %}" class="bordered-btn">Contact Us</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end hero area -->
+
+<section class="cart-banner pt-100 pb-100">
+    	<div class="container">
+        	<div class="row clearfix">
+            	<!--Image Column-->
+            	<div class="image-column col-lg-6">
+                    	<img src="{% static 'assets/image/Tutoring.jpg' %}" alt="">
+                    </div>
+                <!--Content Column-->
+                <div class="content-column col-lg-6">
+					<h3><span class="orange-text">On</span> Student Academic Performance</h3>
+                    <div class="text">This study approaches student’s performance prediction with the use of a machine learning technique.
+                        Machine learning is mostly used to study complex relationships between data . Machine learning has the ability to learn without
+                        necessarily being pre-programmed. Among the machine learning techniques is Artificial Neural Network .
+                        Artificial Neural Network (ANN) is growing and gaining recognition in data analysis. It is capable of analysing
+                        complex data sets as well as identify relationships between variables.</div>
+                    <!--Countdown Timer-->
+                    <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2020/2/01"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div>
+                	<a href="cart.html" class="cart-btn mt-3"><i class=""></i> Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col offset-lg-8 mx-auto text-center">
+                    <hr class="light my-4">
+            </div>
+        </div>
+    </section>
+{%endblock%}

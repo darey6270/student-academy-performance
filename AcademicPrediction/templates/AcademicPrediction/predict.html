@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{%block content1 %}
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg"  style="background-image:url({% static 'assets/image/mark_grade.jpg' %})">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Student Academic Prediction</p>
+						<h1>Fill Out the form</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- check out section -->
+	<div class="checkout-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10">
+					<div class="checkout-accordion-wrap">
+						<div class="accordion" id="accordionExample">
+						  <div class="card single-accordion">
+						    <div class="card-header" id="headingOne">
+						      <h5 class="mb-0">
+						        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						          Fill out form
+						        </button>
+						      </h5>
+						    </div>
+
+						    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+						      <div class="card-body">
+						        <div class="billing-address-form">
+						        	<form  method="post" enctype="multipart/form-data">
+										{%csrf_token%}
+										<div class="row">
+											<div class="col">
+												<p><h5>Course Title</h5></p>
+											</div>
+	<div class="col">
+      <p><h5>Score</h5></p>
+    </div>
+	<div class="col">
+      <p><h5>Course Unit</h5></p>
+    </div>
+    <div class="col">
+      <p><h5>CPoint</h5></p>
+    </div>
+  </div>
+										<div class="row">
+											<div class="col">
+												<p>First course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score1|attr:'required:false'  class="form-control main" placeholder="Score 1" %}</p>
+    </div>
+	<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point1|attr:'required:false'  class="form-control main" placeholder="Cpoint 1" %}</p>
+    </div>
+  </div>
+												<div class="row">
+											<div class="col">
+												<p>Second course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score2|attr:'required:false'  class="form-control main" placeholder="Score 2" %}</p>
+    </div>
+													<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point2|attr:'required:false'  class="form-control main" placeholder="Cpoint 2" %}</p>
+    </div>
+  </div>
+
+																		<div class="row">
+											<div class="col">
+												<p>Third course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score3|attr:'required:false'  class="form-control main" placeholder="Score 3" %}</p>
+    </div>
+																			<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point3|attr:'required:false'  class="form-control main" placeholder="Cpoint 3" %}</p>
+    </div>
+  </div>
+																			<div class="row">
+											<div class="col">
+												<p>Four course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score4|attr:'required:false'  class="form-control main" placeholder="Score 4" %}</p>
+    </div>
+																				<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point4|attr:'required:false'  class="form-control main" placeholder="Cpoint 4" %}</p>
+    </div>
+  </div>
+
+									<div class="row">
+											<div class="col">
+												<p>fiveth course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score5|attr:'required:false'  class="form-control main" placeholder="Score 5" %}</p>
+    </div>
+	<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point5|attr:'required:false'  class="form-control main" placeholder="Cpoint 5" %}</p>
+    </div>
+  </div>
+																			<div class="row">
+											<div class="col">
+												<p>Sixth course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score6|attr:'required:false'  class="form-control main" placeholder="Score 6" %}</p>
+    </div>
+	<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point6|attr:'required:false'  class="form-control main" placeholder="Cpoint 6" %}</p>
+    </div>
+  </div>
+
+										<div class="row">
+											<div class="col">
+												<p>Seventh course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score7|attr:'required:false'  class="form-control main" placeholder="Score 7" %}</p>
+    </div>
+	<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point7|attr:'required:false'  class="form-control main" placeholder="Cpoint 7" %}</p>
+    </div>
+  </div>
+
+									<div class="row">
+											<div class="col">
+												<p>Eight course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score8|attr:'required:false'  class="form-control main" placeholder="Score 8" %}</p>
+    </div>
+	<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point8|attr:'required:false'  class="form-control main" placeholder="Cpoint 8" %}</p>
+    </div>
+  </div>
+																			<div class="row">
+											<div class="col">
+												<p>Nineth course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score9|attr:'required:false'  class="form-control main" placeholder="Score 9" %}</p>
+    </div>
+	<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point9|attr:'required:false'  class="form-control main" placeholder="Cpoint 9" %}</p>
+    </div>
+  </div>
+																			<div class="row">
+											<div class="col">
+												<p>Tenth course title</p>
+											</div>
+    <div class="col">
+      <p>{% render_field form.score10|attr:'required:false'  class="form-control main" placeholder="Score 10" %}</p>
+    </div>
+	<div class="col">
+      <p><input type="number" placeholder="Unit"   /></p>
+    </div>
+    <div class="col">
+      <p>{% render_field form.point10|attr:'required:false'  class="form-control main" placeholder="Cpoint 10" %}</p>
+    </div>
+  </div>
+																										<div class="row">
+											<div class="col">
+
+											</div>
+    <div class="col">
+     <p><input class="btn btn-main-md" type="submit" value="Proceed"></p>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+						        	</form>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end check out section -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/1.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/2.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/3.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/4.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+{%endblock%}
